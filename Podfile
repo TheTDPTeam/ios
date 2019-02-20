@@ -21,7 +21,8 @@ target 'ManageStudent' do
     pod 'SVProgressHUD'
     pod 'Kingfisher'
     pod 'XLPagerTabStrip', '~> 8.1'
-
+    pod 'FSCalendar'
+    pod 'expanding-collection'
 
     # Firebase
     pod 'Firebase/Core'

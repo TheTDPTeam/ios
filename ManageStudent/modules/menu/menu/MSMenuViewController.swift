@@ -13,7 +13,7 @@ class MSMenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.initUI()
        
     }
     
@@ -21,12 +21,24 @@ class MSMenuViewController: UIViewController {
         self.menuTableView.delegate = self
         self.menuTableView.dataSource = self
         
-        self.menuTableView.register(UINib.init(nibName: "MSMenuTableViewCell",bundle: Bundle.main), forCellReuseIdentifier: "MSMenuTableViewCell")
+        self.menuTableView.register(UINib.init(nibName: "MSMenuViewTableViewCell",bundle: Bundle.main), forCellReuseIdentifier: "MSMenuViewTableViewCell")
     }
     
-    //MARK TABLE VIEW :
+//    func switchCourseVC() {
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//        appDelegate.switchCourseVC()
+//    }
+//    
+//    func switchCalendarVC() {
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//        appDelegate.switchCalendarVC()
+//    }
+//    
+//    func switchContactVC() {
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//        appDelegate.switchContactVC()
+//    }
     
-
 }
 
 extension MSMenuViewController : UITableViewDelegate,UITableViewDataSource{
@@ -35,9 +47,20 @@ extension MSMenuViewController : UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = menuTableView.dequeueReusableCell(withIdentifier: "MSMenuTableViewCell", for: indexPath) as! MSMenuTableViewCell
+        let cell = menuTableView.dequeueReusableCell(withIdentifier: "MSMenuViewTableViewCell", for: indexPath) as! MSMenuViewTableViewCell
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        if indexPath.row == 0 {
+            appDelegate.switchCourseVC()
+        } else if indexPath.row == 1 {
+             appDelegate.switchCalendarVC()
+        } else if indexPath.row == 2 {
+            appDelegate.switchContactVC()
+        }
     }
     
     

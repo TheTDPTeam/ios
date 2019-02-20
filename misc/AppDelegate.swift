@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+         configureNavigationTabBar()
         return true
     }
 
@@ -46,7 +46,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tabbarView = storyboard.instantiateViewController(withIdentifier:"TabbarView")
         self.window?.rootViewController = tabbarView
     }
+    
+    func switchCourseVC() {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let courseVC = storyboard.instantiateViewController(withIdentifier:"courseVC")
+        self.window?.rootViewController = courseVC
+    }
+    
+    func switchCalendarVC() {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let calendarVC = storyboard.instantiateViewController(withIdentifier:"calendarVC")
+        self.window?.rootViewController = calendarVC
+    }
+    
+    func switchContactVC() {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let contactVC = storyboard.instantiateViewController(withIdentifier:"contactVC")
+        self.window?.rootViewController = contactVC
+    }
 
 
 }
+
+extension AppDelegate {
+    
+    fileprivate func configureNavigationTabBar() {
+        //transparent background
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().isTranslucent = true
+        
+        let shadow = NSShadow()
+        shadow.shadowOffset = CGSize(width: 0, height: 2)
+        shadow.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1)
+        
+        UINavigationBar.appearance().titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: UIColor.white,
+            NSAttributedString.Key.shadow: shadow,
+        ]
+    }
+}
+
 

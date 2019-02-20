@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MSMenuViewTableViewCell" rowHeight="119" id="KGk-i7-Jjw" customClass="MSMenuViewTableViewCell" customModule="ManageStudent" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="380" height="119"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="380" height="118.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B2a-yR-HaE">
+                        <rect key="frame" x="10" y="10" width="360" height="98.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MS_menu_education" translatesAutoresizingMaskIntoConstraints="NO" id="eCM-UP-zAs">
+                                <rect key="frame" x="15" y="11" width="50" height="76"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P2b-NX-EI0">
+                                <rect key="frame" x="81" y="5" width="0.5" height="88.5"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="0.5" id="GEq-ND-nVq"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stE-yJ-3rv">
+                                <rect key="frame" x="101" y="8" width="238" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Massa primis placeat blanditiis laudantium ullam minus aliquam luctus accumsan, pariatur itaque! Accusamus, eros class ipsa," textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7HP-mE-Eml">
+                                <rect key="frame" x="96.5" y="38.5" width="258.5" height="26.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Update: 2019/02/25" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikL-sw-U2Q">
+                                <rect key="frame" x="242.5" y="74" width="109.5" height="16.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16.5" id="hLX-Nj-af3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Oblique" family="Avenir" pointSize="12"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99215686274509807" green="0.99215686274509807" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="stE-yJ-3rv" secondAttribute="trailing" constant="21" id="7SI-KO-8tK"/>
+                            <constraint firstItem="stE-yJ-3rv" firstAttribute="leading" secondItem="P2b-NX-EI0" secondAttribute="trailing" constant="19.5" id="8J6-YT-YpO"/>
+                            <constraint firstAttribute="bottom" secondItem="ikL-sw-U2Q" secondAttribute="bottom" constant="8" id="AMg-e1-gKO"/>
+                            <constraint firstAttribute="bottom" secondItem="P2b-NX-EI0" secondAttribute="bottom" constant="5" id="Kjy-wl-uN2"/>
+                            <constraint firstItem="P2b-NX-EI0" firstAttribute="top" secondItem="B2a-yR-HaE" secondAttribute="top" constant="5" id="Ml4-VI-ZMc"/>
+                            <constraint firstAttribute="trailing" secondItem="ikL-sw-U2Q" secondAttribute="trailing" constant="8" id="YAd-aQ-CWD"/>
+                            <constraint firstAttribute="trailing" secondItem="7HP-mE-Eml" secondAttribute="trailing" constant="5" id="cDX-Hk-Jn8"/>
+                            <constraint firstItem="stE-yJ-3rv" firstAttribute="top" secondItem="B2a-yR-HaE" secondAttribute="top" constant="8" id="dkL-gz-gEk"/>
+                            <constraint firstItem="7HP-mE-Eml" firstAttribute="top" secondItem="stE-yJ-3rv" secondAttribute="bottom" constant="7" id="hJN-YC-kSG"/>
+                            <constraint firstItem="eCM-UP-zAs" firstAttribute="top" secondItem="B2a-yR-HaE" secondAttribute="top" constant="11" id="hND-Yx-rf6"/>
+                            <constraint firstItem="7HP-mE-Eml" firstAttribute="leading" secondItem="P2b-NX-EI0" secondAttribute="trailing" constant="15" id="iNS-RX-N5f"/>
+                            <constraint firstItem="ikL-sw-U2Q" firstAttribute="top" secondItem="7HP-mE-Eml" secondAttribute="bottom" constant="9" id="l7n-9M-eDn"/>
+                            <constraint firstItem="eCM-UP-zAs" firstAttribute="leading" secondItem="B2a-yR-HaE" secondAttribute="leading" constant="15" id="nfU-Kc-bG7"/>
+                            <constraint firstAttribute="bottom" secondItem="eCM-UP-zAs" secondAttribute="bottom" constant="11.5" id="xiK-9f-7pM"/>
+                            <constraint firstItem="P2b-NX-EI0" firstAttribute="leading" secondItem="eCM-UP-zAs" secondAttribute="trailing" constant="16" id="yqL-qX-Zvn"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="7"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.96463197469711304" green="0.96474748849868774" blue="0.96459275484085083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="B2a-yR-HaE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="6VB-VL-dPy"/>
+                    <constraint firstAttribute="trailing" secondItem="B2a-yR-HaE" secondAttribute="trailing" constant="10" id="K8e-GN-HjB"/>
+                    <constraint firstAttribute="bottom" secondItem="B2a-yR-HaE" secondAttribute="bottom" constant="10" id="XnI-py-xfb"/>
+                    <constraint firstItem="B2a-yR-HaE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="eix-zZ-zyg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="177.59999999999999" y="187.55622188905548"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="MS_menu_education" width="48" height="48"/>
+    </resources>
+</document>
