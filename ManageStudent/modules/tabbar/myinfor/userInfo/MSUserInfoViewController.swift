@@ -13,17 +13,23 @@ class MSUserInfoViewController: UIViewController , IndicatorInfoProvider {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var SaveInfoView: UIView!
-
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.requestData()
     }
 
 
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: "My Info")
+    }
+    
+    func requestData(){
+        MSBaseRequestManager.shareInstance.get(url: SERVER_REQUEST_URL + REQUEST_MY_DETAILS, params: nil
+            , completion: { (data) in
+                print("\(data as! String)")
+        }) { (error) in
+            NSLog(error ?? "")
+        }
     }
 }

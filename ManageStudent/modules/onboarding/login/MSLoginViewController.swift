@@ -39,18 +39,12 @@ class MSLoginViewController: UIViewController {
             self.animationErrorMessage(title: "*Please enter username!")
             break
         default:
-            MSBaseRequestManager.shareInstance.get(url: SERVER_REQUEST_URL + REQUEST_ACCOUNT_STUDENT, params: nil
-                , completion: { (data) in
-                    print("\(data as! String)")
-            }) { (error) in
-                NSLog(error ?? "")
+            MSUserManager.shareInstance.logInUser(username: self.usernameLabel.text!, password: self.passwordLabel.text!, completion: { token in
+                 UserDefaults.standard.set(token, forKey: "TOKEN")
+                 MSSwitchViewManager.shareInstance.switchTabbarView()
+            }) {
+                print("error")
             }
-//            self.switchTabbarView()
-//            MSUserManager.shareInstance.logInUser(username: self.usernameLabel.text!, password: self.passwordLabel.text!, completion: {
-//                print("hello")
-//            }) {
-//                print("error")
-//            }
             break
         }
     }
@@ -68,10 +62,7 @@ class MSLoginViewController: UIViewController {
         self.notifiLabel.bounds.size.width -= 10.0
     }
     
-    func switchTabbarView() {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.switchTabbar()
-    }
+    
 
 }
 

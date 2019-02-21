@@ -14,7 +14,6 @@ class MSNotificationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initUI()
-       
     }
     
     func initUI() {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tcr-je-3N7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -157,7 +157,7 @@
             </objects>
             <point key="canvasLocation" x="254" y="130"/>
         </scene>
-        <!--Item 2-->
+        <!--Home-->
         <scene sceneID="C2u-DU-2lS">
             <objects>
                 <viewController id="pc2-Th-BKC" customClass="MSMenuViewController" customModule="ManageStudent" customModuleProvider="target" sceneMemberID="viewController">
@@ -196,7 +196,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8Ui-aU-UDO"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="3wG-fv-dSx"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="MS_home" id="3wG-fv-dSx"/>
                     <navigationItem key="navigationItem" id="tGB-y2-tNE"/>
                     <connections>
                         <outlet property="menuTableView" destination="8My-yb-Jeg" id="2QO-Pd-6YN"/>
@@ -1225,7 +1225,7 @@
             </objects>
             <point key="canvasLocation" x="2109.5999999999999" y="-917.09145427286364"/>
         </scene>
-        <!--Item 1-->
+        <!--Notification-->
         <scene sceneID="ldy-wR-RSM">
             <objects>
                 <viewController id="t9x-qD-2DO" customClass="MSNotificationViewController" customModule="ManageStudent" customModuleProvider="target" sceneMemberID="viewController">
@@ -1257,7 +1257,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ld2-G3-bAv"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="Xun-Oh-sur"/>
+                    <tabBarItem key="tabBarItem" title="Notification" image="MS_notifi" id="Xun-Oh-sur"/>
                     <connections>
                         <outlet property="notificationTableView" destination="lam-qy-Mio" id="w18-Zk-F1T"/>
                         <segue destination="tXi-Ni-jlo" kind="modal" identifier="showDetailNotification" id="tXR-K8-vMb"/>
@@ -1277,8 +1277,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="t9x-qD-2DO" kind="relationship" relationship="viewControllers" id="Vsc-83-iKo"/>
                         <segue destination="pc2-Th-BKC" kind="relationship" relationship="viewControllers" id="b0G-5N-GuF"/>
+                        <segue destination="t9x-qD-2DO" kind="relationship" relationship="viewControllers" id="Vsc-83-iKo"/>
                         <segue destination="nzD-B0-bWP" kind="relationship" relationship="viewControllers" id="qcg-8y-5ya"/>
                     </connections>
                 </tabBarController>
@@ -1394,7 +1394,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MuN-Kc-Zp6"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="ipP-NK-4IX"/>
+                    <tabBarItem key="tabBarItem" title="User" image="MS_users" id="ipP-NK-4IX">
+                        <color key="badgeColor" red="0.99428683520000005" green="0.74578261379999999" blue="0.066108733419999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="FIND FRIENDS" id="Hgc-rD-49U"/>
                     <connections>
@@ -1569,10 +1571,13 @@
         <image name="CloseButton" width="40" height="40"/>
         <image name="MS_background_button" width="5506" height="2308"/>
         <image name="MS_background_login" width="8485" height="12185"/>
+        <image name="MS_home" width="24" height="24"/>
         <image name="MS_menu_background" width="2650" height="5015"/>
         <image name="MS_nf_left" width="48" height="48"/>
+        <image name="MS_notifi" width="24" height="24"/>
         <image name="MS_password" width="48" height="48"/>
         <image name="MS_user" width="48" height="48"/>
+        <image name="MS_users" width="24" height="24"/>
         <image name="UI_cancel" width="64" height="64"/>
         <image name="UI_check" width="64" height="64"/>
         <image name="UI_mail" width="64" height="64"/>

@@ -8,7 +8,7 @@
 
 import Foundation
 
-var REQUEST_ACCOUNT_LOGIN   = "/login"
-var REQUEST_ACCOUNT_STUDENT = "/api/value"
+var REQUEST_ACCOUNT_LOGIN   = "/auth/login"
+var REQUEST_MY_DETAILS      = "/api/users/myDetails"
 var REQUEST_ACCOUNT_TEACHER = ""
 var REQUEST_ACCOUNT_FOROT   = ""
