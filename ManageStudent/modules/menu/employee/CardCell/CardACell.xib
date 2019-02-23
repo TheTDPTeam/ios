@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardA" id="gTV-IL-0wX" customClass="CardACell" customModule="ManageStudent" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="357" height="158"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="357" height="158"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mh0-Ky-U6n">
+                        <rect key="frame" x="8" y="8" width="341" height="71"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face1" translatesAutoresizingMaskIntoConstraints="NO" id="Rep-K7-KRM">
+                                <rect key="frame" x="23" y="10" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="RHW-By-ysh"/>
+                                    <constraint firstAttribute="height" constant="50" id="yJ9-Da-A3M"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nguyen Van Anh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5td-cV-WeD">
+                                <rect key="frame" x="82" y="10" width="235" height="24"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Staff" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIv-PJ-Bad">
+                                <rect key="frame" x="82" y="39" width="26" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="26" id="bZz-dt-Fge"/>
+                                    <constraint firstAttribute="height" constant="18" id="kD6-Vi-Wdf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Rep-K7-KRM" firstAttribute="leading" secondItem="mh0-Ky-U6n" secondAttribute="leading" constant="23" id="2bG-Wf-snc"/>
+                            <constraint firstItem="dIv-PJ-Bad" firstAttribute="top" secondItem="5td-cV-WeD" secondAttribute="bottom" constant="5" id="4Mk-yW-6FG"/>
+                            <constraint firstAttribute="trailing" secondItem="5td-cV-WeD" secondAttribute="trailing" constant="24" id="CbO-wF-Xv8"/>
+                            <constraint firstItem="5td-cV-WeD" firstAttribute="top" secondItem="mh0-Ky-U6n" secondAttribute="top" constant="10" id="OcE-s7-VCo"/>
+                            <constraint firstItem="Rep-K7-KRM" firstAttribute="top" secondItem="mh0-Ky-U6n" secondAttribute="top" constant="10" id="U39-bO-Zfa"/>
+                            <constraint firstAttribute="height" constant="71" id="UT4-KN-jgL"/>
+                            <constraint firstItem="dIv-PJ-Bad" firstAttribute="leading" secondItem="Rep-K7-KRM" secondAttribute="trailing" constant="9" id="YsV-7H-Rh3"/>
+                            <constraint firstAttribute="bottom" secondItem="Rep-K7-KRM" secondAttribute="bottom" constant="11" id="d8s-5k-Gh5"/>
+                            <constraint firstItem="5td-cV-WeD" firstAttribute="leading" secondItem="Rep-K7-KRM" secondAttribute="trailing" constant="9" id="owa-iF-Azc"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9l2-On-FCF">
+                        <rect key="frame" x="8" y="79" width="341" height="71"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q96-CH-B9M">
+                                <rect key="frame" x="79" y="0.0" width="257" height="0.5"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="w2P-jW-CmZ"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Phone:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sB-9I-6WV">
+                                <rect key="frame" x="82" y="8.5" width="51" height="22"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
+                                <color key="textColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0935113114" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sea-qu-s4b">
+                                <rect key="frame" x="148" y="8" width="182" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvb-bV-bKn">
+                                <rect key="frame" x="82" y="37.5" width="44" height="21.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
+                                <color key="textColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="vananhnguyen@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKI-q5-xhh">
+                                <rect key="frame" x="130" y="38.5" width="199" height="20.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Q96-CH-B9M" firstAttribute="leading" secondItem="9l2-On-FCF" secondAttribute="leading" constant="79" id="5KS-Fk-k7v"/>
+                            <constraint firstItem="sea-qu-s4b" firstAttribute="leading" secondItem="9sB-9I-6WV" secondAttribute="trailing" constant="15" id="9EV-Q7-0m6"/>
+                            <constraint firstItem="fKI-q5-xhh" firstAttribute="top" secondItem="sea-qu-s4b" secondAttribute="bottom" constant="7" id="E5L-oG-9oF"/>
+                            <constraint firstItem="fKI-q5-xhh" firstAttribute="leading" secondItem="hvb-bV-bKn" secondAttribute="trailing" constant="4" id="Ear-3O-Irk"/>
+                            <constraint firstItem="sea-qu-s4b" firstAttribute="top" secondItem="9l2-On-FCF" secondAttribute="top" constant="8" id="Fa6-XA-7i9"/>
+                            <constraint firstItem="hvb-bV-bKn" firstAttribute="top" secondItem="9sB-9I-6WV" secondAttribute="bottom" constant="7" id="HRD-EI-8gK"/>
+                            <constraint firstAttribute="bottom" secondItem="hvb-bV-bKn" secondAttribute="bottom" constant="12" id="KDI-xE-5Ce"/>
+                            <constraint firstItem="hvb-bV-bKn" firstAttribute="leading" secondItem="9l2-On-FCF" secondAttribute="leading" constant="82" id="KuM-1v-lYO"/>
+                            <constraint firstAttribute="bottom" secondItem="fKI-q5-xhh" secondAttribute="bottom" constant="12" id="LBI-gS-sqv"/>
+                            <constraint firstItem="9sB-9I-6WV" firstAttribute="leading" secondItem="9l2-On-FCF" secondAttribute="leading" constant="82" id="PBa-ZI-zSk"/>
+                            <constraint firstAttribute="trailing" secondItem="fKI-q5-xhh" secondAttribute="trailing" constant="12" id="ZfP-Iv-MZS"/>
+                            <constraint firstItem="Q96-CH-B9M" firstAttribute="top" secondItem="9l2-On-FCF" secondAttribute="top" id="ey1-ku-Yim"/>
+                            <constraint firstAttribute="trailing" secondItem="sea-qu-s4b" secondAttribute="trailing" constant="11" id="oel-bO-qHn"/>
+                            <constraint firstAttribute="trailing" secondItem="Q96-CH-B9M" secondAttribute="trailing" constant="5" id="tDA-Wx-Oha"/>
+                            <constraint firstItem="9sB-9I-6WV" firstAttribute="top" secondItem="Q96-CH-B9M" secondAttribute="bottom" constant="8" id="tIL-e0-kOB"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="mh0-Ky-U6n" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="42Z-7a-zii"/>
+                <constraint firstAttribute="trailing" secondItem="mh0-Ky-U6n" secondAttribute="trailing" constant="8" id="Aez-fD-6bO"/>
+                <constraint firstAttribute="bottom" secondItem="9l2-On-FCF" secondAttribute="bottom" constant="8" id="HHe-dV-CKM"/>
+                <constraint firstItem="9l2-On-FCF" firstAttribute="top" secondItem="mh0-Ky-U6n" secondAttribute="bottom" id="Oij-xZ-JIo"/>
+                <constraint firstItem="mh0-Ky-U6n" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="ahE-Ie-iZ2"/>
+                <constraint firstAttribute="trailing" secondItem="9l2-On-FCF" secondAttribute="trailing" constant="8" id="ycf-ZC-yU5"/>
+                <constraint firstItem="9l2-On-FCF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="zxg-Ao-xd9"/>
+            </constraints>
+            <size key="customSize" width="357" height="158"/>
+            <point key="canvasLocation" x="234.40000000000001" y="114.24287856071965"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="face1" width="81" height="79"/>
+    </resources>
+</document>

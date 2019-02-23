@@ -1,0 +1,11 @@
+framework module MMCardView {
+  umbrella header "MMCardView-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module MMCardView.Swift {
+    header "MMCardView-Swift.h"
+    requires objc
+}

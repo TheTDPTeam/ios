@@ -7,24 +7,142 @@
 //
 
 import UIKit
+import MMCardView
 
 class MSEmployeeViewController: UIViewController {
-
+    var sectionData = [["CardA","CardA","CardA"],["CardA","CardA","CardA"],["CardA"],["CardA"]]
+    
+    @IBOutlet weak var cardCollection: MMCollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        cardCollection.register(UINib(nibName: "CardACell", bundle: nil), forCellWithReuseIdentifier: "CardA")
+        cardCollection.register(UINib(nibName: "CardBCell", bundle: nil), forCellWithReuseIdentifier: "CardB")
+        cardCollection.register(UINib(nibName: "CardCCell", bundle: nil), forCellWithReuseIdentifier: "CardC")
+        
+        if let layout = cardCollection.collectionViewLayout as? CustomCardLayout {
+            layout.titleHeight = 80.0
+            layout.bottomShowCount = 3
+            layout.cardHeight = 200
+            layout.showStyle = .cover
+        }
+    }
+    @IBAction func segmentAction(seg:UISegmentedControl) {
+        if (seg.selectedSegmentIndex == 0) {
+            (cardCollection.collectionViewLayout as?  CustomCardLayout)?.showStyle = .cover
+        } else {
+            (cardCollection.collectionViewLayout as?  CustomCardLayout)?.showStyle = .normal
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func filterAction () {
+        let sheet = UIAlertController.init(title: "Filter", message: "Select you want to show in View", preferredStyle: .actionSheet)
+        
+        let removeA = UIAlertAction(title: "Remove A", style: .default, handler: {
+            (alert: UIAlertAction!) -> Void in
+            
+            if self.sectionData[0].count == 0 {
+                return
+            }
+            self.sectionData[0].removeFirst()
+            self.cardCollection.deleteItems(at: [IndexPath.init(row: 0, section: 0)])
+        })
+        
+        let removeB = UIAlertAction(title: "Remove B", style: .default, handler: {
+            (alert: UIAlertAction!) -> Void in
+            if self.sectionData[1].count == 0 {
+                return
+            }
+            
+            self.sectionData[1].removeFirst()
+            self.cardCollection.deleteItems(at: [IndexPath.init(row: 0, section: 1)])
+        })
+        
+        let removeC = UIAlertAction(title: "Remove C", style: .default, handler: {
+            (alert: UIAlertAction!) -> Void in
+            if self.sectionData[2].count == 0 {
+                return
+            }
+            
+            self.sectionData[2].removeFirst()
+            self.cardCollection.deleteItems(at: [IndexPath(row: 0, section: 2)])
+        })
+        let appendA = UIAlertAction(title: "Append 2 A items", style: .default, handler: {
+            (alert: UIAlertAction!) -> Void in
+            self.sectionData[0].insert("CardA", at: 0)
+            self.sectionData[0].insert("CardA", at: 0)
+            
+            self.cardCollection.insertItems(at: [IndexPath(row: 0, section:0),
+                                                 IndexPath(row: 1, section:0)])
+        })
+        
+        let appendB = UIAlertAction(title: "Append B", style: .default, handler: {
+            (alert: UIAlertAction!) -> Void in
+            self.sectionData[1].insert("CardB", at: 0)
+            self.cardCollection.insertItems(at: [IndexPath.init(row: 0, section:1)])
+        })
+        let appendC = UIAlertAction(title: "Append C", style: .default, handler: {
+            (alert: UIAlertAction!) -> Void in
+            self.sectionData[2].insert("CardC", at: 0)
+            self.cardCollection.insertItems(at: [IndexPath.init(row: 0, section:2)])
+        })
+        
+        sheet.addAction(removeA)
+        sheet.addAction(removeB)
+        sheet.addAction(removeC)
+        sheet.addAction(appendA)
+        sheet.addAction(appendB)
+        sheet.addAction(appendC)
+        self.present(sheet, animated: true, completion: nil)
     }
-    */
-
 }
+
+extension MSEmployeeViewController: UICollectionViewDataSource {
+    
+    public func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return sectionData.count
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return sectionData[section].count
+    }
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return self.card(collectionView: collectionView, cellForItemAt: indexPath)
+    }
+    
+    fileprivate func card(collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let idenTifier = sectionData[indexPath.section][indexPath.row]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: idenTifier, for: indexPath)
+        switch cell {
+        case let c as CardCCell:
+            
+            c.clickCallBack {
+//                if let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Second") as? SecondViewController {
+//                    vc.delegate = self
+//                    //                    (self.cardCollection.collectionViewLayout as? CustomCardLayout)?.isFullScreen = true
+//                    self.cardCollection.presentViewController(to: vc)
+//                }
+            }
+        case let c as CardBCell:
+            c.imgV.image = #imageLiteral(resourceName: "item 2")
+        default:
+            break
+        }
+        return cell
+    }
+}
+
+extension MSEmployeeViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    }
+}
+
+//extension MSEmployeeViewController: SecondViewProtocol {
+//    func removeCard() {
+//
+//        if let layout = self.cardCollection.collectionViewLayout as? CustomCardLayout , let path = layout.selectPath {
+//            sectionData[path.section].remove(at: path.row)
+//            cardCollection.deleteItems(at: [path])
+//        }
+//        //       card.removeSelectCard()
+//    }
+//}

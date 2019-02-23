@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		4C19CDB121E45A0B007BEA70 /* MSUserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C19CDB021E45A0B007BEA70 /* MSUserManager.swift */; };
 		4C2B4C8C21F5D9A5007D9E4D /* MSMyCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2B4C8B21F5D9A5007D9E4D /* MSMyCourseViewController.swift */; };
+		4C2DA8A6222067580032EBA1 /* MMCardView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C2DA8A5222067580032EBA1 /* MMCardView.framework */; };
+		4C2DA8A7222067610032EBA1 /* MMCardView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C2DA8A5222067580032EBA1 /* MMCardView.framework */; };
+		4C2DA8A8222067610032EBA1 /* MMCardView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C2DA8A5222067580032EBA1 /* MMCardView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4C2DA8B1222068A20032EBA1 /* CardCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C2DA8AA222068A20032EBA1 /* CardCCell.xib */; };
+		4C2DA8B2222068A20032EBA1 /* CardBCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C2DA8AB222068A20032EBA1 /* CardBCell.xib */; };
+		4C2DA8B3222068A20032EBA1 /* CardCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2DA8AC222068A20032EBA1 /* CardCCell.swift */; };
+		4C2DA8B4222068A20032EBA1 /* CardDCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2DA8AD222068A20032EBA1 /* CardDCell.swift */; };
+		4C2DA8B5222068A20032EBA1 /* CardBCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2DA8AE222068A20032EBA1 /* CardBCell.swift */; };
+		4C2DA8B6222068A20032EBA1 /* CardACell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C2DA8AF222068A20032EBA1 /* CardACell.xib */; };
+		4C2DA8B7222068A20032EBA1 /* CardACell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2DA8B0222068A20032EBA1 /* CardACell.swift */; };
 		4C3EB74D221B202500D42640 /* MSCalendarTeacherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EB74C221B202500D42640 /* MSCalendarTeacherViewController.swift */; };
 		4C44058821DFA5D200E89B80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C44058721DFA5D200E89B80 /* AppDelegate.swift */; };
 		4C44058A21DFA5D200E89B80 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C44058921DFA5D200E89B80 /* ViewController.swift */; };
@@ -74,10 +84,32 @@
 		F27701ECA24F8898E7F507A4 /* Pods_ManageStudent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248771A09CF0EDE3FC6251BC /* Pods_ManageStudent.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4C2DA8A42220665B0032EBA1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4C2DA8A8222067610032EBA1 /* MMCardView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		248771A09CF0EDE3FC6251BC /* Pods_ManageStudent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ManageStudent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C19CDB021E45A0B007BEA70 /* MSUserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSUserManager.swift; sourceTree = "<group>"; };
 		4C2B4C8B21F5D9A5007D9E4D /* MSMyCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSMyCourseViewController.swift; sourceTree = "<group>"; };
+		4C2DA8A5222067580032EBA1 /* MMCardView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MMCardView.framework; sourceTree = "<group>"; };
+		4C2DA8AA222068A20032EBA1 /* CardCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardCCell.xib; sourceTree = "<group>"; };
+		4C2DA8AB222068A20032EBA1 /* CardBCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardBCell.xib; sourceTree = "<group>"; };
+		4C2DA8AC222068A20032EBA1 /* CardCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCCell.swift; sourceTree = "<group>"; };
+		4C2DA8AD222068A20032EBA1 /* CardDCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDCell.swift; sourceTree = "<group>"; };
+		4C2DA8AE222068A20032EBA1 /* CardBCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardBCell.swift; sourceTree = "<group>"; };
+		4C2DA8AF222068A20032EBA1 /* CardACell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardACell.xib; sourceTree = "<group>"; };
+		4C2DA8B0222068A20032EBA1 /* CardACell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardACell.swift; sourceTree = "<group>"; };
 		4C3EB74C221B202500D42640 /* MSCalendarTeacherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSCalendarTeacherViewController.swift; sourceTree = "<group>"; };
 		4C44058421DFA5D200E89B80 /* ManageStudent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManageStudent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C44058721DFA5D200E89B80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -152,6 +184,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F27701ECA24F8898E7F507A4 /* Pods_ManageStudent.framework in Frameworks */,
+				4C2DA8A6222067580032EBA1 /* MMCardView.framework in Frameworks */,
+				4C2DA8A7222067610032EBA1 /* MMCardView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +199,20 @@
 				74DA42EAD5B52D43AE72859C /* Pods-ManageStudent.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		4C2DA8A9222068A20032EBA1 /* CardCell */ = {
+			isa = PBXGroup;
+			children = (
+				4C2DA8AA222068A20032EBA1 /* CardCCell.xib */,
+				4C2DA8AB222068A20032EBA1 /* CardBCell.xib */,
+				4C2DA8AC222068A20032EBA1 /* CardCCell.swift */,
+				4C2DA8AD222068A20032EBA1 /* CardDCell.swift */,
+				4C2DA8AE222068A20032EBA1 /* CardBCell.swift */,
+				4C2DA8AF222068A20032EBA1 /* CardACell.xib */,
+				4C2DA8B0222068A20032EBA1 /* CardACell.swift */,
+			);
+			path = CardCell;
 			sourceTree = "<group>";
 		};
 		4C44057B21DFA5D200E89B80 = {
@@ -192,6 +240,7 @@
 		4C44058621DFA5D200E89B80 /* ManageStudent */ = {
 			isa = PBXGroup;
 			children = (
+				4C2DA8A5222067580032EBA1 /* MMCardView.framework */,
 				4CC03CD921E07D8B007BECDA /* shared */,
 				4CC03CCD21E079EA007BECDA /* managers */,
 				4CC03CCE21E07A14007BECDA /* models */,
@@ -652,6 +701,7 @@
 		4CCBED8B21F0D90F006364F0 /* employee */ = {
 			isa = PBXGroup;
 			children = (
+				4C2DA8A9222068A20032EBA1 /* CardCell */,
 				4CCBED9221F0DB43006364F0 /* MSEmployeeViewController.swift */,
 			);
 			path = employee;
@@ -711,6 +761,7 @@
 				4C44058121DFA5D200E89B80 /* Frameworks */,
 				4C44058221DFA5D200E89B80 /* Resources */,
 				1698B8828C6922F5186D01AC /* [CP] Embed Pods Frameworks */,
+				4C2DA8A42220665B0032EBA1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -767,11 +818,14 @@
 				4C6E987E221BEF88009A6C99 /* MSCourseCollectionViewCell.xib in Resources */,
 				4C6E9886221BF4C6009A6C99 /* MSSemesterHeaderTableViewCell.xib in Resources */,
 				4CCBED7E21F0D6AE006364F0 /* MSMenuTableViewCell.xib in Resources */,
+				4C2DA8B1222068A20032EBA1 /* CardCCell.xib in Resources */,
 				4C44058D21DFA5D200E89B80 /* Main.storyboard in Resources */,
+				4C2DA8B6222068A20032EBA1 /* CardACell.xib in Resources */,
 				4C8585C821F7224E0008F520 /* MSNotificationHeaderView.xib in Resources */,
 				4C49E923221CCEBB0046822F /* MSSubjectTableViewCell.xib in Resources */,
 				4C6E9879221BBCA8009A6C99 /* MSMenuViewTableViewCell.xib in Resources */,
 				4C6E9882221BF4A2009A6C99 /* MSCourseDetailTableViewCell.xib in Resources */,
+				4C2DA8B2222068A20032EBA1 /* CardBCell.xib in Resources */,
 				4C6E9899221BFA94009A6C99 /* DemoCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -872,7 +926,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C2DA8B4222068A20032EBA1 /* CardDCell.swift in Sources */,
 				4CCBED6D21F0C434006364F0 /* MSMyCourseTableViewCell.swift in Sources */,
+				4C2DA8B5222068A20032EBA1 /* CardBCell.swift in Sources */,
 				4C6E989A221BFA94009A6C99 /* DemoCollectionViewCell.swift in Sources */,
 				4C6E98D2221BFF44009A6C99 /* ConstraintsHelper.swift in Sources */,
 				4C8585C621F722330008F520 /* MSNotificationHeaderView.swift in Sources */,
@@ -891,6 +947,7 @@
 				4C6E9881221BF4A2009A6C99 /* MSCourseDetailTableViewCell.swift in Sources */,
 				4C6E98D7221BFF44009A6C99 /* CollectionViewHelper.swift in Sources */,
 				4CCBED7921F0D5D5006364F0 /* MSMenuViewController.swift in Sources */,
+				4C2DA8B3222068A20032EBA1 /* CardCCell.swift in Sources */,
 				4CC03CDF21E07F0B007BECDA /* MSLoginViewController.swift in Sources */,
 				4CC03CE221E08016007BECDA /* MSBaseRequestManager.swift in Sources */,
 				4CFA756421F1760800D592F0 /* UIColor.swift in Sources */,
@@ -917,6 +974,7 @@
 				4C6E98D9221BFF44009A6C99 /* AnimationBarButton.swift in Sources */,
 				4CCBED9321F0DB43006364F0 /* MSEmployeeViewController.swift in Sources */,
 				4C2B4C8C21F5D9A5007D9E4D /* MSMyCourseViewController.swift in Sources */,
+				4C2DA8B7222068A20032EBA1 /* CardACell.swift in Sources */,
 				4C6E98D6221BFF44009A6C99 /* TransitionDriver.swift in Sources */,
 				4C6E989B221BFA94009A6C99 /* DemoViewController.swift in Sources */,
 				4C49E922221CCEBB0046822F /* MSSubjectTableViewCell.swift in Sources */,

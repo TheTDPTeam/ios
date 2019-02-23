@@ -42,6 +42,5 @@ class MSBaseRequestManager  {
                     failure(response.result.value as? String)
                 }
             })
-        
     }
 }
