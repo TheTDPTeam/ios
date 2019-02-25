@@ -13,10 +13,11 @@ class MSCourseViewController: UIViewController {
     @IBOutlet weak var pageView: UIView!
     @IBOutlet weak var courseCollection: UICollectionView!
     let item = ["i13","i15","i17"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
+
 }
 
 extension MSCourseViewController: UICollectionViewDataSource,UICollectionViewDelegate{

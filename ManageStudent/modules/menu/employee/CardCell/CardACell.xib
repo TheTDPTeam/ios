@@ -125,6 +125,12 @@
                 <constraint firstItem="9l2-On-FCF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="zxg-Ao-xd9"/>
             </constraints>
             <size key="customSize" width="357" height="158"/>
+            <connections>
+                <outlet property="emailLabel" destination="fKI-q5-xhh" id="eYZ-du-7Fu"/>
+                <outlet property="fullNameLabel" destination="5td-cV-WeD" id="DJh-GK-YGg"/>
+                <outlet property="localEmployee" destination="dIv-PJ-Bad" id="oDf-Mp-zss"/>
+                <outlet property="phoneLabel" destination="sea-qu-s4b" id="eLn-5I-0Az"/>
+            </connections>
             <point key="canvasLocation" x="234.40000000000001" y="114.24287856071965"/>
         </collectionViewCell>
     </objects>

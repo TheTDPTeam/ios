@@ -12,11 +12,6 @@
 		4C2DA8A6222067580032EBA1 /* MMCardView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C2DA8A5222067580032EBA1 /* MMCardView.framework */; };
 		4C2DA8A7222067610032EBA1 /* MMCardView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C2DA8A5222067580032EBA1 /* MMCardView.framework */; };
 		4C2DA8A8222067610032EBA1 /* MMCardView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C2DA8A5222067580032EBA1 /* MMCardView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4C2DA8B1222068A20032EBA1 /* CardCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C2DA8AA222068A20032EBA1 /* CardCCell.xib */; };
-		4C2DA8B2222068A20032EBA1 /* CardBCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C2DA8AB222068A20032EBA1 /* CardBCell.xib */; };
-		4C2DA8B3222068A20032EBA1 /* CardCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2DA8AC222068A20032EBA1 /* CardCCell.swift */; };
-		4C2DA8B4222068A20032EBA1 /* CardDCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2DA8AD222068A20032EBA1 /* CardDCell.swift */; };
-		4C2DA8B5222068A20032EBA1 /* CardBCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2DA8AE222068A20032EBA1 /* CardBCell.swift */; };
 		4C2DA8B6222068A20032EBA1 /* CardACell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C2DA8AF222068A20032EBA1 /* CardACell.xib */; };
 		4C2DA8B7222068A20032EBA1 /* CardACell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2DA8B0222068A20032EBA1 /* CardACell.swift */; };
 		4C3EB74D221B202500D42640 /* MSCalendarTeacherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EB74C221B202500D42640 /* MSCalendarTeacherViewController.swift */; };
@@ -59,6 +54,12 @@
 		4C6E98DA221BFF44009A6C99 /* Rotatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6E98CA221BFF44009A6C99 /* Rotatable.swift */; };
 		4C8585C621F722330008F520 /* MSNotificationHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8585C521F722330008F520 /* MSNotificationHeaderView.swift */; };
 		4C8585C821F7224E0008F520 /* MSNotificationHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C8585C721F7224E0008F520 /* MSNotificationHeaderView.xib */; };
+		4C9E70512222F8320056E5BE /* MSStaff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9E70502222F8320056E5BE /* MSStaff.swift */; };
+		4C9E70532222F9130056E5BE /* MSContactManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9E70522222F9130056E5BE /* MSContactManager.swift */; };
+		4C9E7057222306B90056E5BE /* MSCourseManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9E7056222306B90056E5BE /* MSCourseManger.swift */; };
+		4C9E7059222306E70056E5BE /* MSCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9E7058222306E70056E5BE /* MSCourse.swift */; };
+		4C9E705B2223077A0056E5BE /* MSSemester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9E705A2223077A0056E5BE /* MSSemester.swift */; };
+		4C9E705D222307850056E5BE /* MSSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9E705C222307850056E5BE /* MSSubject.swift */; };
 		4CB43F1821E3791C00097F29 /* App-Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB43F1721E3791C00097F29 /* App-Config.swift */; };
 		4CC03CD721E07BDA007BECDA /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC03CD621E07BDA007BECDA /* BaseTableViewCell.swift */; };
 		4CC03CDB21E07DB0007BECDA /* MSConstaint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC03CDA21E07DB0007BECDA /* MSConstaint.swift */; };
@@ -103,11 +104,6 @@
 		4C19CDB021E45A0B007BEA70 /* MSUserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSUserManager.swift; sourceTree = "<group>"; };
 		4C2B4C8B21F5D9A5007D9E4D /* MSMyCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSMyCourseViewController.swift; sourceTree = "<group>"; };
 		4C2DA8A5222067580032EBA1 /* MMCardView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MMCardView.framework; sourceTree = "<group>"; };
-		4C2DA8AA222068A20032EBA1 /* CardCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardCCell.xib; sourceTree = "<group>"; };
-		4C2DA8AB222068A20032EBA1 /* CardBCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardBCell.xib; sourceTree = "<group>"; };
-		4C2DA8AC222068A20032EBA1 /* CardCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCCell.swift; sourceTree = "<group>"; };
-		4C2DA8AD222068A20032EBA1 /* CardDCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDCell.swift; sourceTree = "<group>"; };
-		4C2DA8AE222068A20032EBA1 /* CardBCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardBCell.swift; sourceTree = "<group>"; };
 		4C2DA8AF222068A20032EBA1 /* CardACell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardACell.xib; sourceTree = "<group>"; };
 		4C2DA8B0222068A20032EBA1 /* CardACell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardACell.swift; sourceTree = "<group>"; };
 		4C3EB74C221B202500D42640 /* MSCalendarTeacherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSCalendarTeacherViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +148,12 @@
 		4C6E98CA221BFF44009A6C99 /* Rotatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rotatable.swift; sourceTree = "<group>"; };
 		4C8585C521F722330008F520 /* MSNotificationHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSNotificationHeaderView.swift; sourceTree = "<group>"; };
 		4C8585C721F7224E0008F520 /* MSNotificationHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MSNotificationHeaderView.xib; sourceTree = "<group>"; };
+		4C9E70502222F8320056E5BE /* MSStaff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSStaff.swift; sourceTree = "<group>"; };
+		4C9E70522222F9130056E5BE /* MSContactManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSContactManager.swift; sourceTree = "<group>"; };
+		4C9E7056222306B90056E5BE /* MSCourseManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSCourseManger.swift; sourceTree = "<group>"; };
+		4C9E7058222306E70056E5BE /* MSCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSCourse.swift; sourceTree = "<group>"; };
+		4C9E705A2223077A0056E5BE /* MSSemester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSSemester.swift; sourceTree = "<group>"; };
+		4C9E705C222307850056E5BE /* MSSubject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSSubject.swift; sourceTree = "<group>"; };
 		4CB43F1721E3791C00097F29 /* App-Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App-Config.swift"; sourceTree = "<group>"; };
 		4CC03CD621E07BDA007BECDA /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		4CC03CDA21E07DB0007BECDA /* MSConstaint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSConstaint.swift; sourceTree = "<group>"; };
@@ -204,11 +206,6 @@
 		4C2DA8A9222068A20032EBA1 /* CardCell */ = {
 			isa = PBXGroup;
 			children = (
-				4C2DA8AA222068A20032EBA1 /* CardCCell.xib */,
-				4C2DA8AB222068A20032EBA1 /* CardBCell.xib */,
-				4C2DA8AC222068A20032EBA1 /* CardCCell.swift */,
-				4C2DA8AD222068A20032EBA1 /* CardDCell.swift */,
-				4C2DA8AE222068A20032EBA1 /* CardBCell.swift */,
 				4C2DA8AF222068A20032EBA1 /* CardACell.xib */,
 				4C2DA8B0222068A20032EBA1 /* CardACell.swift */,
 			);
@@ -519,6 +516,8 @@
 				4CC03CE121E08016007BECDA /* MSBaseRequestManager.swift */,
 				4C19CDB021E45A0B007BEA70 /* MSUserManager.swift */,
 				4C48878C221E674200A90F2C /* MSSwitchViewManager.swift */,
+				4C9E70522222F9130056E5BE /* MSContactManager.swift */,
+				4C9E7056222306B90056E5BE /* MSCourseManger.swift */,
 			);
 			path = managers;
 			sourceTree = "<group>";
@@ -527,6 +526,10 @@
 			isa = PBXGroup;
 			children = (
 				4C49E91D221CC4AB0046822F /* dataCourse.swift */,
+				4C9E70502222F8320056E5BE /* MSStaff.swift */,
+				4C9E7058222306E70056E5BE /* MSCourse.swift */,
+				4C9E705A2223077A0056E5BE /* MSSemester.swift */,
+				4C9E705C222307850056E5BE /* MSSubject.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -818,14 +821,12 @@
 				4C6E987E221BEF88009A6C99 /* MSCourseCollectionViewCell.xib in Resources */,
 				4C6E9886221BF4C6009A6C99 /* MSSemesterHeaderTableViewCell.xib in Resources */,
 				4CCBED7E21F0D6AE006364F0 /* MSMenuTableViewCell.xib in Resources */,
-				4C2DA8B1222068A20032EBA1 /* CardCCell.xib in Resources */,
 				4C44058D21DFA5D200E89B80 /* Main.storyboard in Resources */,
 				4C2DA8B6222068A20032EBA1 /* CardACell.xib in Resources */,
 				4C8585C821F7224E0008F520 /* MSNotificationHeaderView.xib in Resources */,
 				4C49E923221CCEBB0046822F /* MSSubjectTableViewCell.xib in Resources */,
 				4C6E9879221BBCA8009A6C99 /* MSMenuViewTableViewCell.xib in Resources */,
 				4C6E9882221BF4A2009A6C99 /* MSCourseDetailTableViewCell.xib in Resources */,
-				4C2DA8B2222068A20032EBA1 /* CardBCell.xib in Resources */,
 				4C6E9899221BFA94009A6C99 /* DemoCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -926,9 +927,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C2DA8B4222068A20032EBA1 /* CardDCell.swift in Sources */,
 				4CCBED6D21F0C434006364F0 /* MSMyCourseTableViewCell.swift in Sources */,
-				4C2DA8B5222068A20032EBA1 /* CardBCell.swift in Sources */,
 				4C6E989A221BFA94009A6C99 /* DemoCollectionViewCell.swift in Sources */,
 				4C6E98D2221BFF44009A6C99 /* ConstraintsHelper.swift in Sources */,
 				4C8585C621F722330008F520 /* MSNotificationHeaderView.swift in Sources */,
@@ -947,13 +946,14 @@
 				4C6E9881221BF4A2009A6C99 /* MSCourseDetailTableViewCell.swift in Sources */,
 				4C6E98D7221BFF44009A6C99 /* CollectionViewHelper.swift in Sources */,
 				4CCBED7921F0D5D5006364F0 /* MSMenuViewController.swift in Sources */,
-				4C2DA8B3222068A20032EBA1 /* CardCCell.swift in Sources */,
 				4CC03CDF21E07F0B007BECDA /* MSLoginViewController.swift in Sources */,
 				4CC03CE221E08016007BECDA /* MSBaseRequestManager.swift in Sources */,
 				4CFA756421F1760800D592F0 /* UIColor.swift in Sources */,
+				4C9E705D222307850056E5BE /* MSSubject.swift in Sources */,
 				4C6E98D5221BFF44009A6C99 /* CornerAnimatable.swift in Sources */,
 				4C44058821DFA5D200E89B80 /* AppDelegate.swift in Sources */,
 				4C6E98D8221BFF44009A6C99 /* StoryboardHelper.swift in Sources */,
+				4C9E70512222F8320056E5BE /* MSStaff.swift in Sources */,
 				4CED211322193C6900B18FAD /* MSCollectionViewCell.swift in Sources */,
 				4C6E9885221BF4C6009A6C99 /* MSSemesterHeaderTableViewCell.swift in Sources */,
 				4C6E98D1221BFF44009A6C99 /* ScreenShotHelper.swift in Sources */,
@@ -962,6 +962,8 @@
 				4CFA757821F1E25100D592F0 /* MSUserinforTabbarViewController.swift in Sources */,
 				4CCBED8321F0D740006364F0 /* MSNotificationTableViewCell.swift in Sources */,
 				4CC03CDD21E07DC8007BECDA /* MSFirebaseURL.swift in Sources */,
+				4C9E705B2223077A0056E5BE /* MSSemester.swift in Sources */,
+				4C9E7057222306B90056E5BE /* MSCourseManger.swift in Sources */,
 				4CCBED7D21F0D6AE006364F0 /* MSMenuTableViewCell.swift in Sources */,
 				4C6E98CB221BFF44009A6C99 /* Images.swift in Sources */,
 				4CCBED6521F0C3F4006364F0 /* MSUserInfoViewController.swift in Sources */,
@@ -972,10 +974,12 @@
 				4C6E98D4221BFF44009A6C99 /* ConfigurationHelper.swift in Sources */,
 				4C6E98DA221BFF44009A6C99 /* Rotatable.swift in Sources */,
 				4C6E98D9221BFF44009A6C99 /* AnimationBarButton.swift in Sources */,
+				4C9E70532222F9130056E5BE /* MSContactManager.swift in Sources */,
 				4CCBED9321F0DB43006364F0 /* MSEmployeeViewController.swift in Sources */,
 				4C2B4C8C21F5D9A5007D9E4D /* MSMyCourseViewController.swift in Sources */,
 				4C2DA8B7222068A20032EBA1 /* CardACell.swift in Sources */,
 				4C6E98D6221BFF44009A6C99 /* TransitionDriver.swift in Sources */,
+				4C9E7059222306E70056E5BE /* MSCourse.swift in Sources */,
 				4C6E989B221BFA94009A6C99 /* DemoViewController.swift in Sources */,
 				4C49E922221CCEBB0046822F /* MSSubjectTableViewCell.swift in Sources */,
 				4C49E91E221CC4AB0046822F /* dataCourse.swift in Sources */,

@@ -10,12 +10,19 @@ import UIKit
 import MMCardView
 
 class CardACell: CardCell {
-    @IBOutlet weak var labTitle:UILabel!
-    @IBOutlet weak var txtView:UITextView!
+    @IBOutlet weak var fullNameLabel: UILabel!
+    @IBOutlet weak var localEmployee: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
-
+    
+    func configCell(data: MSStaff) {
+        self.fullNameLabel.text = data.fullName
+        self.emailLabel.text = data.email
+        self.phoneLabel.text = data.phoneNumber
+    }
 }
