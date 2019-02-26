@@ -28,4 +28,14 @@ class MSMyCourseTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func configDataCell(subject: MSSubject) {
+        self.subjectLabel.text = subject.subjectName ?? ""
+        self.theoryLabel.text = String(subject.theoryScore!)
+        self.practiceLabel.text = String(subject.practicalScore!)
+        self.rollCallLabel.text = subject.attendingRate
+        self.statusLabel.text = subject.success ?? false ? "PASS" : "FALSE"
+        self.statusLabel.textColor = subject.success ?? false ? UIColor.red : UIColor(displayP3Red: 0/255, green: 191/255, blue: 0/255, alpha: 1.0)
+        self.statusImg.image = subject.success ?? false ? UIImage(named: "UI_check") : UIImage(named: "UI_cancel")
+    }
+    
 }

@@ -8,6 +8,7 @@
 
 import UIKit
 import FSCalendar
+import SVProgressHUD
 
 class MSCalendarViewController: UIViewController {
     
@@ -26,7 +27,18 @@ class MSCalendarViewController: UIViewController {
     var datesWithEvent = ["2019/02/12","2019/02/16","2019/02/19",
                           "2019/02/21","2019/02/26","2019/02/14","2019/02/23"]
     
+    @IBOutlet weak var attendanceLabel: UILabel!
+    @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var teacherLabel: UILabel!
+    @IBOutlet weak var subjectLabel: UILabel!
     @IBOutlet weak var calendar: FSCalendar!
+    @IBOutlet weak var heightWarningView: NSLayoutConstraint!
+    @IBOutlet weak var warningView: UIView!
+    
+    var listCalendar = [MSCalendar]()
+    var datesWithStudy = [String]()
+    var datesWithTest  = [String]()
+    
     fileprivate let formatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd"
@@ -38,14 +50,34 @@ class MSCalendarViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        SVProgressHUD.show(withStatus: "Loading...")
+        self.configDataCalendar()
         self.configCalendar()
+    }
+    
+    func configDataCalendar() {
+        MSCalendarManager.shareInstance.fetchCalendar { (listCalendar) in
+            self.listCalendar = listCalendar
+            for i in 0...2{
+                for date in listCalendar[i].attendances{
+                    self.datesWithStudy.append(date.checkingDate ?? "")
+                    if date.checkingDate == listCalendar[i].attendances.last!.checkingDate{
+                        self.datesWithTest.append(date.checkingDate ?? "")
+                    }
+                }
+            }
+            SVProgressHUD.dismiss()
+            self.calendar.reloadData()
+        }
+    }
+    @IBAction func activeComBack(_ sender: Any) {
+        MSSwitchViewManager.shareInstance.switchTabbarView()
     }
     
     func configCalendar() {
         self.calendar.dataSource = self
         self.calendar.delegate = self
         self.calendar.select(Date())
-        self.calendar.allowsMultipleSelection = true
         
         self.calendar.appearance.weekdayTextColor = UIColor(red: 239/255.0, green: 239/255.0, blue: 242/255.0, alpha: 1.0)
         self.calendar.appearance.headerTitleColor = UIColor(red: 246/255.0, green: 246/255.0, blue: 246/255.0, alpha: 1.0)
@@ -57,9 +89,8 @@ class MSCalendarViewController: UIViewController {
         self.calendar.appearance.titleTodayColor = UIColor(red: 98/255.0, green: 101/255.0, blue: 103/255.0, alpha: 1.0)
         self.calendar.appearance.titleDefaultColor =  UIColor(red: 120/255.0, green: 120/255.0, blue: 120/255.0, alpha: 1.0)
         
-//        var weekdays = calendar.calendarWeekdayView.weekdayLabels
-//        (weekdays[5] ).textColor = UIColor(red: 239/255.0, green: 239/255.0, blue: 242/255.0, alpha: 1.0)
-//        (weekdays[6] ).textColor = UIColor(red: 239/255.0, green: 239/255.0, blue: 242/255.0, alpha: 1.0)
+//        self.heightWarningView.constant = 0
+        self.warningView.isHidden = true
     }
    
 }
@@ -82,6 +113,7 @@ extension MSCalendarViewController : FSCalendarDelegate,FSCalendarDataSource,FSC
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         let dateSelected = self.formatter.string(from: date)
         print("calendar did select date \(dateSelected)")
+        self.fetchDataCalendar(calendar: dateSelected)
         self.calendar.appearance.selectionColor =  UIColor(red: 252/255.0, green: 131/255.0, blue: 35/255.0, alpha: 1.0)
 //        self.calendar.appearance.titleSelectionColor = UIColor(red: 252/255.0, green: 251/255.0, blue: 252/255.0, alpha: 1.0)
         if monthPosition == .previous || monthPosition == .next {
@@ -91,10 +123,22 @@ extension MSCalendarViewController : FSCalendarDelegate,FSCalendarDataSource,FSC
     
     func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, fillDefaultColorFor date: Date) -> UIColor? {
         let key = self.formatter.string(from: date)
-        if let color = self.fillDefaultColors[key] {
-            return color
+        if datesWithStudy.contains(key) {
+            if datesWithTest.contains(key){
+                return UIColor(displayP3Red: 183/255, green: 32/255, blue: 32/255, alpha: 1.0)
+            } else {
+                return  UIColor(red: 232/255.0, green: 146/255.0, blue: 39/255.0, alpha: 1.0)
+            }
         }
         return nil
+    }
+    
+    func calendar(_ calendar: FSCalendar, shouldSelect date: Date, at monthPosition: FSCalendarMonthPosition) -> Bool{
+        let dateSelected = self.formatter.string(from: date)
+        if datesWithStudy.contains(dateSelected){
+            return true
+        }
+        return false
     }
     
     func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, borderDefaultColorFor date: Date) -> UIColor? {
@@ -103,6 +147,25 @@ extension MSCalendarViewController : FSCalendarDelegate,FSCalendarDataSource,FSC
             return color
         }
         return appearance.borderDefaultColor
+    }
+    
+    func fetchDataCalendar(calendar: String) {
+        for i in 0...2{
+            for date in listCalendar[i].attendances{
+                if date.checkingDate == calendar {
+                    self.subjectLabel.text = listCalendar[i].subjectName
+                    self.teacherLabel.text = listCalendar[i].teacherName
+                    self.attendanceLabel.text = date.status
+                    self.statusLabel.text = String(listCalendar[i].attendances.count)
+                    if datesWithTest.contains(calendar){
+                        self.warningView.isHidden = false
+                    } else {
+                        self.warningView.isHidden = true
+                    }
+                    return
+                }
+            }
+        }
     }
 }
 

@@ -9,7 +9,9 @@
 import UIKit
 
 class MSMenuViewTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var titileLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

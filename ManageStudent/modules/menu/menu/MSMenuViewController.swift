@@ -10,6 +10,11 @@ import UIKit
 
 class MSMenuViewController: UIViewController {
     @IBOutlet weak var menuTableView: UITableView!
+    var data = [
+                DataUser(title:"Course",description:"Sunt tenetur, ut perferendis ante quos rerum maiores purus sociis soluta tenetur dapibus a molestie?"),
+                DataUser(title:"Calendar",description:"Sunt tenetur, ut perferendis ante quos rerum maiores purus sociis soluta tenetur dapibus a molestie?"),
+                DataUser(title:"Contact",description:"Sunt tenetur, ut perferendis ante quos rerum maiores purus sociis soluta tenetur dapibus a molestie?")
+                ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +53,8 @@ extension MSMenuViewController : UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = menuTableView.dequeueReusableCell(withIdentifier: "MSMenuViewTableViewCell", for: indexPath) as! MSMenuViewTableViewCell
-        
+        cell.titileLabel.text = data[indexPath.row].title
+        cell.descriptionLabel.text = data[indexPath.row].description
         return cell
     }
     

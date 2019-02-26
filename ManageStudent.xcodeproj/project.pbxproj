@@ -66,6 +66,9 @@
 		4CC03CDD21E07DC8007BECDA /* MSFirebaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC03CDC21E07DC8007BECDA /* MSFirebaseURL.swift */; };
 		4CC03CDF21E07F0B007BECDA /* MSLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC03CDE21E07F0B007BECDA /* MSLoginViewController.swift */; };
 		4CC03CE221E08016007BECDA /* MSBaseRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC03CE121E08016007BECDA /* MSBaseRequestManager.swift */; };
+		4CC3F87022244A240014C440 /* MSCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC3F86F22244A240014C440 /* MSCalendar.swift */; };
+		4CC3F87222244A9E0014C440 /* MSAttendance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC3F87122244A9E0014C440 /* MSAttendance.swift */; };
+		4CC3F87422244D250014C440 /* MSCalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC3F87322244D250014C440 /* MSCalendarManager.swift */; };
 		4CCBED6521F0C3F4006364F0 /* MSUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCBED6321F0C3F4006364F0 /* MSUserInfoViewController.swift */; };
 		4CCBED6D21F0C434006364F0 /* MSMyCourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCBED6B21F0C434006364F0 /* MSMyCourseTableViewCell.swift */; };
 		4CCBED6E21F0C434006364F0 /* MSMyCourseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CCBED6C21F0C434006364F0 /* MSMyCourseTableViewCell.xib */; };
@@ -80,6 +83,9 @@
 		4CCBED9321F0DB43006364F0 /* MSEmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCBED9221F0DB43006364F0 /* MSEmployeeViewController.swift */; };
 		4CCBED9521F0DB4F006364F0 /* MSCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCBED9421F0DB4F006364F0 /* MSCalendarViewController.swift */; };
 		4CED211322193C6900B18FAD /* MSCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CED211122193C6900B18FAD /* MSCollectionViewCell.swift */; };
+		4CF5B63E2224CB5C0050DD9F /* MSUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF5B63D2224CB5C0050DD9F /* MSUser.swift */; };
+		4CF5B64922250C7A0050DD9F /* TLABillSummaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CF5B64722250C790050DD9F /* TLABillSummaryHeaderView.xib */; };
+		4CF5B64A22250C7A0050DD9F /* TLABillSummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF5B64822250C790050DD9F /* TLABillSummaryHeaderView.swift */; };
 		4CFA756421F1760800D592F0 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFA756321F1760800D592F0 /* UIColor.swift */; };
 		4CFA757821F1E25100D592F0 /* MSUserinforTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFA757721F1E25100D592F0 /* MSUserinforTabbarViewController.swift */; };
 		F27701ECA24F8898E7F507A4 /* Pods_ManageStudent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248771A09CF0EDE3FC6251BC /* Pods_ManageStudent.framework */; };
@@ -160,6 +166,9 @@
 		4CC03CDC21E07DC8007BECDA /* MSFirebaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSFirebaseURL.swift; sourceTree = "<group>"; };
 		4CC03CDE21E07F0B007BECDA /* MSLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSLoginViewController.swift; sourceTree = "<group>"; };
 		4CC03CE121E08016007BECDA /* MSBaseRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSBaseRequestManager.swift; sourceTree = "<group>"; };
+		4CC3F86F22244A240014C440 /* MSCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSCalendar.swift; sourceTree = "<group>"; };
+		4CC3F87122244A9E0014C440 /* MSAttendance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSAttendance.swift; sourceTree = "<group>"; };
+		4CC3F87322244D250014C440 /* MSCalendarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSCalendarManager.swift; sourceTree = "<group>"; };
 		4CCBED6321F0C3F4006364F0 /* MSUserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSUserInfoViewController.swift; sourceTree = "<group>"; };
 		4CCBED6B21F0C434006364F0 /* MSMyCourseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSMyCourseTableViewCell.swift; sourceTree = "<group>"; };
 		4CCBED6C21F0C434006364F0 /* MSMyCourseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MSMyCourseTableViewCell.xib; sourceTree = "<group>"; };
@@ -174,6 +183,9 @@
 		4CCBED9221F0DB43006364F0 /* MSEmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSEmployeeViewController.swift; sourceTree = "<group>"; };
 		4CCBED9421F0DB4F006364F0 /* MSCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSCalendarViewController.swift; sourceTree = "<group>"; };
 		4CED211122193C6900B18FAD /* MSCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSCollectionViewCell.swift; sourceTree = "<group>"; };
+		4CF5B63D2224CB5C0050DD9F /* MSUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSUser.swift; sourceTree = "<group>"; };
+		4CF5B64722250C790050DD9F /* TLABillSummaryHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TLABillSummaryHeaderView.xib; sourceTree = "<group>"; };
+		4CF5B64822250C790050DD9F /* TLABillSummaryHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLABillSummaryHeaderView.swift; sourceTree = "<group>"; };
 		4CFA756321F1760800D592F0 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		4CFA757721F1E25100D592F0 /* MSUserinforTabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSUserinforTabbarViewController.swift; sourceTree = "<group>"; };
 		74DA42EAD5B52D43AE72859C /* Pods-ManageStudent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManageStudent.release.xcconfig"; path = "Pods/Target Support Files/Pods-ManageStudent/Pods-ManageStudent.release.xcconfig"; sourceTree = "<group>"; };
@@ -518,6 +530,7 @@
 				4C48878C221E674200A90F2C /* MSSwitchViewManager.swift */,
 				4C9E70522222F9130056E5BE /* MSContactManager.swift */,
 				4C9E7056222306B90056E5BE /* MSCourseManger.swift */,
+				4CC3F87322244D250014C440 /* MSCalendarManager.swift */,
 			);
 			path = managers;
 			sourceTree = "<group>";
@@ -530,6 +543,9 @@
 				4C9E7058222306E70056E5BE /* MSCourse.swift */,
 				4C9E705A2223077A0056E5BE /* MSSemester.swift */,
 				4C9E705C222307850056E5BE /* MSSubject.swift */,
+				4CC3F86F22244A240014C440 /* MSCalendar.swift */,
+				4CC3F87122244A9E0014C440 /* MSAttendance.swift */,
+				4CF5B63D2224CB5C0050DD9F /* MSUser.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -632,6 +648,8 @@
 		4CCBED5A21F0C0C8006364F0 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				4CF5B64822250C790050DD9F /* TLABillSummaryHeaderView.swift */,
+				4CF5B64722250C790050DD9F /* TLABillSummaryHeaderView.xib */,
 				4CCBED6B21F0C434006364F0 /* MSMyCourseTableViewCell.swift */,
 				4CCBED6C21F0C434006364F0 /* MSMyCourseTableViewCell.xib */,
 			);
@@ -817,6 +835,7 @@
 				4C44059221DFA5D400E89B80 /* LaunchScreen.storyboard in Resources */,
 				4CCBED8421F0D740006364F0 /* MSNotificationTableViewCell.xib in Resources */,
 				4CCBED6E21F0C434006364F0 /* MSMyCourseTableViewCell.xib in Resources */,
+				4CF5B64922250C7A0050DD9F /* TLABillSummaryHeaderView.xib in Resources */,
 				4C44058F21DFA5D400E89B80 /* Assets.xcassets in Resources */,
 				4C6E987E221BEF88009A6C99 /* MSCourseCollectionViewCell.xib in Resources */,
 				4C6E9886221BF4C6009A6C99 /* MSSemesterHeaderTableViewCell.xib in Resources */,
@@ -964,6 +983,8 @@
 				4CC03CDD21E07DC8007BECDA /* MSFirebaseURL.swift in Sources */,
 				4C9E705B2223077A0056E5BE /* MSSemester.swift in Sources */,
 				4C9E7057222306B90056E5BE /* MSCourseManger.swift in Sources */,
+				4CC3F87022244A240014C440 /* MSCalendar.swift in Sources */,
+				4CC3F87422244D250014C440 /* MSCalendarManager.swift in Sources */,
 				4CCBED7D21F0D6AE006364F0 /* MSMenuTableViewCell.swift in Sources */,
 				4C6E98CB221BFF44009A6C99 /* Images.swift in Sources */,
 				4CCBED6521F0C3F4006364F0 /* MSUserInfoViewController.swift in Sources */,
@@ -971,6 +992,7 @@
 				4CB43F1821E3791C00097F29 /* App-Config.swift in Sources */,
 				4CCBED8F21F0DA39006364F0 /* MSDetailNotificationViewController.swift in Sources */,
 				4C6E98CC221BFF44009A6C99 /* BasePageCollectionCell.swift in Sources */,
+				4CF5B64A22250C7A0050DD9F /* TLABillSummaryHeaderView.swift in Sources */,
 				4C6E98D4221BFF44009A6C99 /* ConfigurationHelper.swift in Sources */,
 				4C6E98DA221BFF44009A6C99 /* Rotatable.swift in Sources */,
 				4C6E98D9221BFF44009A6C99 /* AnimationBarButton.swift in Sources */,
@@ -981,7 +1003,9 @@
 				4C6E98D6221BFF44009A6C99 /* TransitionDriver.swift in Sources */,
 				4C9E7059222306E70056E5BE /* MSCourse.swift in Sources */,
 				4C6E989B221BFA94009A6C99 /* DemoViewController.swift in Sources */,
+				4CF5B63E2224CB5C0050DD9F /* MSUser.swift in Sources */,
 				4C49E922221CCEBB0046822F /* MSSubjectTableViewCell.swift in Sources */,
+				4CC3F87222244A9E0014C440 /* MSAttendance.swift in Sources */,
 				4C49E91E221CC4AB0046822F /* dataCourse.swift in Sources */,
 				4C6E9878221BBCA8009A6C99 /* MSMenuViewTableViewCell.swift in Sources */,
 				4C6E98CE221BFF44009A6C99 /* PageCollectionView.swift in Sources */,

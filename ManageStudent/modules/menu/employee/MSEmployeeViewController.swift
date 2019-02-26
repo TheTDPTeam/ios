@@ -33,7 +33,10 @@ class MSEmployeeViewController: UIViewController {
         }
     
     }
-
+    @IBAction func activeComBack(_ sender: Any) {
+        MSSwitchViewManager.shareInstance.switchTabbarView()
+    }
+    
 }
 
 extension MSEmployeeViewController: UICollectionViewDataSource {

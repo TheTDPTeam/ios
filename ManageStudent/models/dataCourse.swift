@@ -13,3 +13,8 @@ struct Course {
     let description : String
     let total : Int
 }
+
+struct DataUser {
+    let title : String
+    let description : String
+}
